@@ -1,9 +1,30 @@
 let button = document.querySelector("#trigger");
 let squaresArray = Array.prototype.slice.call(document.querySelectorAll("#square"));
-let squaresChangingColor = false;
+let effectsInProgress = false;
+
+const effectsTrigger = () => {
+    // call changeSquareColors
+    alternateEffectsInProgress();
+    changeSquareColors();
+    changeButtonText();
+}
+
+const alternateEffectsInProgress = () => {
+    (effectsInProgress) ?
+        effectsInProgress = false :
+        effectsInProgress = true;
+}
+
+const changeButtonText = () => {
+    button.style.textContent = "MAKE IT STOP!!!!!"
+
+    // (effectsInProgress) ?
+    // button.style.innerText = "MAKE IT STOP!!!!!" :
+    // button.style.innerText = "MAKE THE BOXES FREAK OUT";
+}
 
 const changeSquareColors = () => {
-    if (squaresChangingColor) {
+    if (effectsInProgress) {
         setTimeout(() => {
             squaresArray.forEach(square => {
                 square.style.backgroundColor = generateRandomColor();
@@ -13,18 +34,10 @@ const changeSquareColors = () => {
     }
 }
 
-const setSquaresChangingColor = () => {
-    (squaresChangingColor) ?
-        squaresChangingColor = false :
-        squaresChangingColor = true;
-    // call changeSquareColors
-    changeSquareColors();
-}
-
 const generateRandomColor = () => {
     // return random color
     let randomColor = Math.floor(Math.random() * 16777215).toString(16);
     return "#" + randomColor;
 }
 
-button.addEventListener('click', setSquaresChangingColor);
+button.addEventListener('click', effectsTrigger);
