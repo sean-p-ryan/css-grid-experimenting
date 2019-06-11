@@ -16,11 +16,11 @@ const alternateEffectsInProgress = () => {
 }
 
 const changeButtonText = () => {
-    button.style.textContent = "MAKE IT STOP!!!!!"
-
-    // (effectsInProgress) ?
-    // button.style.innerText = "MAKE IT STOP!!!!!" :
-    // button.style.innerText = "MAKE THE BOXES FREAK OUT";
+    (effectsInProgress) 
+    ?
+    button.innerText = "RESTORE ORDER"
+    :
+    button.innerText = "UNLEASH CHAOS"
 }
 
 const changeSquareColors = () => {

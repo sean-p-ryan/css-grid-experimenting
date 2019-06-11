@@ -5,13 +5,13 @@
 }
 
 .container {
-    height: 700px;
-    width: 700px;
-    margin: 0 auto;
+    height: 40vh;
+    width: 100vw;
+    /* margin: 10vw auto; */
 }
 
 .grid-container {
-    height: 50%;
+    height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -75,6 +75,10 @@ button {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: aqua;
+    background-color: rgb(240, 88, 52);
     font-weight: 800;
+    font-size: 30px;
+    outline: 0;
 }
+
+button:focus {outline:0;}
