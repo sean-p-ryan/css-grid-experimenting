@@ -1,0 +1,22 @@
+{
+  "name": "css-grid-experimenting",
+  "version": "1.0.0",
+  "description": "A tool for generating random color palettes.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sean-p-ryan/css-grid-experimenting.git"
+  },
+  "author": "Sean Ryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sean-p-ryan/css-grid-experimenting/issues"
+  },
+  "homepage": "https://github.com/sean-p-ryan/css-grid-experimenting#readme",
+  "dependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
